@@ -1,4 +1,5 @@
 import { YOUTUBE_ID } from "../../data/content"
+import { company } from "../../data/company"
 
 type VideoModalProps = {
   onClose: () => void
@@ -16,20 +17,20 @@ export function VideoModal({ onClose }: VideoModalProps) {
         onClick={(event) => event.stopPropagation()}
         role="dialog"
         aria-modal="true"
-        aria-label="Pool cleaning video"
+        aria-label="Videoclip despre serviciile de curățenie"
       >
         <button
           type="button"
           onClick={onClose}
           className="absolute top-3 right-3 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-white text-primary"
-          aria-label="Close video"
+          aria-label="Închide videoclipul"
         >
           <i className="fa-solid fa-xmark" />
         </button>
         <iframe
           className="h-full w-full"
           src={`https://www.youtube.com/embed/${YOUTUBE_ID}?autoplay=1`}
-          title="Waveup pool cleaning"
+          title={`${company.name} - servicii de curățenie`}
           allow="autoplay; encrypted-media; picture-in-picture"
           allowFullScreen
         />
@@ -51,7 +52,7 @@ export function PlayButton({ onClick, size = "sm", className = "" }: PlayButtonP
     <button
       type="button"
       onClick={onClick}
-      aria-label="Play video"
+      aria-label="Redă videoclipul"
       className={`group flex items-center justify-center rounded-full transition-colors ${large ? "h-20 w-20 bg-accent" : "h-[50px] w-[50px] bg-white hover:bg-primary"} ${className}`}
     >
       {large ? (

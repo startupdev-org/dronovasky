@@ -2,16 +2,17 @@ import { useOutletContext } from "react-router-dom"
 import { PageBanner } from "../components/layout/PageBanner"
 import type { SiteOutletContext } from "../components/layout/SiteLayout"
 import { Container } from "../components/ui/SectionHeading"
+import { company } from "../data/company"
 import { videoThumbs } from "../data/content"
 import { usePageTitle } from "../hooks/usePageTitle"
 
 export function VideoGalleryPage() {
   const { openVideo } = useOutletContext<SiteOutletContext>()
-  usePageTitle("Our Videos - Waveup")
+  usePageTitle(`Videouri - ${company.name}`)
 
   return (
     <main>
-      <PageBanner title="Our videos" crumbs={[{ label: "home", href: "/" }, { label: "Our videos" }]} />
+      <PageBanner title="Videourile noastre" crumbs={[{ label: "acasă", href: "/" }, { label: "videouri" }]} />
       <section className="pt-[100px] pb-[70px]">
         <Container>
           <div className="grid gap-[30px] sm:grid-cols-2 lg:grid-cols-3">
@@ -20,7 +21,7 @@ export function VideoGalleryPage() {
                 key={`${image}-${index}`}
                 type="button"
                 onClick={openVideo}
-                aria-label="Play video"
+                aria-label="Redă videoclipul"
                 className="group relative overflow-hidden rounded-xl"
               >
                 <img src={image} alt="" className="aspect-[1/0.83] w-full object-cover" />

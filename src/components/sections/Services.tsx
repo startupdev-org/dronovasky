@@ -24,8 +24,8 @@ export function Services({ items = services, variant = "home" }: ServicesProps) 
           <div className="mb-20">
             <SectionHeading
               align="center"
-              eyebrow="services"
-              title="Professional pool cleaning and maintenance services"
+              eyebrow="servicii"
+              title="Servicii de curățenie profesională"
             />
           </div>
         )}
@@ -55,8 +55,8 @@ export function Services({ items = services, variant = "home" }: ServicesProps) 
 
         {page ? null : (
           <p className="mt-[30px] mb-0 text-center text-muted">
-            <span className="mr-2.5 inline-block rounded-full bg-accent px-3 py-1 text-white">Free</span>
-            Let's make something great work together. <SectionLink href="/contact">get free quote</SectionLink>
+            <span className="mr-2.5 inline-block rounded-full bg-accent px-3 py-1 text-white">Ofertă</span>
+            Trimite poze sau video cu obiectul. <SectionLink href="/contact">Solicită o ofertă</SectionLink>
           </p>
         )}
       </Container>

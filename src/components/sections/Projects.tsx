@@ -19,8 +19,8 @@ export function Projects({ items = projects, showIntro = true }: ProjectsProps) 
           <div className="mb-16 lg:mb-20">
             <SectionHeading
               align="center"
-              eyebrow="Our projects"
-              title="Our projects crystal clear pools in action"
+              eyebrow="portofoliul nostru"
+              title="Lucrări de curățenie realizate cu profesionalism"
             />
           </div>
         ) : null}

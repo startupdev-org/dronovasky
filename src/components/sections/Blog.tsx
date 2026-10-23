@@ -6,7 +6,7 @@ export function Blog() {
     <section id="blog" className="pt-[100px] pb-[70px]">
       <Container>
         <div className="mb-16 lg:mb-20">
-          <SectionHeading align="center" eyebrow="latest blog" title="Latest blog pool tips and insights" />
+          <SectionHeading align="center" eyebrow="noutăți" title="Servicii și soluții de curățenie profesională" />
         </div>
         <div className="grid gap-[30px] md:grid-cols-2 lg:grid-cols-3">
           {posts.map((post) => (
@@ -29,7 +29,7 @@ export function Blog() {
                   href="#blog"
                   className="group relative inline-flex items-center pr-7 text-base font-bold text-accent capitalize transition-colors hover:text-primary"
                 >
-                  read more
+                  Află mai multe
                   <i className="fa-solid fa-arrow-right absolute top-1/2 right-0 -translate-y-1/2 -rotate-45 transition-transform group-hover:rotate-0" />
                 </a>
               </div>

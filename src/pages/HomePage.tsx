@@ -12,11 +12,12 @@ import { Projects } from "../components/sections/Projects"
 import { Services } from "../components/sections/Services"
 import { Testimonials } from "../components/sections/Testimonials"
 import { WhyChoose } from "../components/sections/WhyChoose"
+import { company } from "../data/company"
 import { usePageTitle } from "../hooks/usePageTitle"
 
 export function HomePage() {
   const { openVideo } = useOutletContext<SiteOutletContext>()
-  usePageTitle("Waveup - Pool Cleaning Services")
+  usePageTitle(`${company.name} - Servicii de curățenie profesională`)
 
   return (
     <main>

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { Link, useLocation } from "react-router-dom"
 import { navItems } from "../../data/content"
+import { company } from "../../data/company"
 import { Button } from "../ui/Button"
 
 export function Header() {
@@ -29,7 +30,7 @@ export function Header() {
     >
       <div className="mx-auto flex max-w-[1300px] items-center gap-4 px-[15px] py-[18px] lg:py-[25px]">
         <Link to="/" className="shrink-0" onClick={close}>
-          <img src="/images/logo.svg" alt="Waveup" className="h-[46px] w-auto" />
+          <img src="/images/logo.svg" alt={company.name} className="h-[46px] w-auto" />
         </Link>
 
         <nav className="hidden flex-1 justify-center lg:flex">
@@ -64,14 +65,14 @@ export function Header() {
 
         <div className="ml-auto hidden lg:block">
           <Button href="/contact" tone="highlight">
-            Get In Touch
+            Contactează-ne
           </Button>
         </div>
 
         <button
           type="button"
           className="ml-auto flex h-[38px] w-[38px] flex-col items-center justify-center gap-1 rounded-md bg-accent lg:hidden"
-          aria-label={open ? "Close menu" : "Open menu"}
+          aria-label={open ? "Închide meniul" : "Deschide meniul"}
           aria-expanded={open}
           onClick={() => setOpen((value) => !value)}
         >
@@ -115,7 +116,7 @@ export function Header() {
             ))}
             <li className="px-5 py-3">
               <Button href="/contact" tone="highlight" className="w-auto">
-                Get In Touch
+                Contactează-ne
               </Button>
             </li>
           </ul>

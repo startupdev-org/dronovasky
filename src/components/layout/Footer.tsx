@@ -1,16 +1,17 @@
 import type { ReactNode } from "react"
 import { Link } from "react-router-dom"
 import { footerServices, quickLinks } from "../../data/content"
+import { company, companyContact } from "../../data/company"
 import { Container } from "../ui/SectionHeading"
 
-const socials = [
-  { icon: "fa-brands fa-pinterest-p", label: "Pinterest" },
-  { icon: "fa-brands fa-x-twitter", label: "X" },
-  { icon: "fa-brands fa-facebook-f", label: "Facebook" },
-  { icon: "fa-brands fa-instagram", label: "Instagram" },
-]
+const START_YEAR = 2026;
 
 export function Footer() {
+
+  const currentYear = new Date().getFullYear();
+  const years =
+    START_YEAR === currentYear ? `${currentYear}` : `${START_YEAR}-${currentYear}`;
+
   return (
     <footer id="contact" className="mx-auto mb-5 max-w-[1880px] overflow-hidden rounded-xl">
       <div className="relative bg-[url('/images/footer-bg.jpg')] bg-cover bg-top px-0 pt-20">
@@ -18,9 +19,9 @@ export function Footer() {
         <Container className="relative z-10">
           <div className="mb-[60px] flex flex-col items-start justify-between gap-8 border-b border-white/10 pb-[60px] md:flex-row md:items-center">
             <h2 className="max-w-[560px] text-[30px] leading-[1.2] font-semibold text-white sm:text-[40px] lg:w-1/2 lg:text-[46px]">
-              Contact us today for expert pool care services
+              Contactează-ne pentru servicii de curățenie profesională
             </h2>
-            <Link to="/contact" className="md:ml-auto" aria-label="Contact now">
+            <Link to="/contact" className="md:ml-auto" aria-label="Contactează-ne">
               <img
                 src="/images/contact-now-circle.svg"
                 alt=""
@@ -31,15 +32,15 @@ export function Footer() {
 
           <div className="grid gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,2fr)]">
             <div className="lg:mr-[70px]">
-              <img src="/images/footer-logo.svg" alt="Waveup" className="mb-5 w-[190px]" />
+              <img src="/images/footer-logo.svg" alt={company.name} className="mb-5 w-[190px]" />
               <p className="mb-[30px] text-white">
-                We provide expert pool cleaning, maintenance, and repair services for crystal-clear, safe swimming.
+                Curățăm tot. De la sol până la cer. Servicii profesionale pentru locuințe, oficii, spații comerciale și clădiri.
               </p>
               <ul className="m-0 flex list-none gap-3 p-0">
-                {socials.map((social) => (
+                {company.socials.map((social) => (
                   <li key={social.label}>
                     <a
-                      href="#contact"
+                      href={social.href}
                       aria-label={social.label}
                       className="flex h-[38px] w-[38px] items-center justify-center rounded-full border border-white text-lg text-white transition-colors hover:border-accent hover:text-accent"
                     >
@@ -51,7 +52,7 @@ export function Footer() {
             </div>
 
             <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-[0.7fr_1.1fr_1.1fr] lg:gap-[60px]">
-              <FooterColumn title="quick link">
+              <FooterColumn title="linkuri rapide">
                 <ul className="m-0 list-disc space-y-2.5 pl-5 marker:text-accent">
                   {quickLinks.map((link) => (
                     <li key={link.label} className="text-white capitalize">
@@ -63,7 +64,7 @@ export function Footer() {
                 </ul>
               </FooterColumn>
 
-              <FooterColumn title="Services" divided>
+              <FooterColumn title="servicii" divided>
                 <ul className="m-0 list-disc space-y-2.5 pl-5 marker:text-accent">
                   {footerServices.map((service) => (
                     <li key={service.href} className="text-white capitalize">
@@ -75,20 +76,20 @@ export function Footer() {
                 </ul>
               </FooterColumn>
 
-              <FooterColumn title="get in touch">
+              <FooterColumn title="contacte">
                 <div className="space-y-6 text-white">
                   <ContactRow icon="fa-solid fa-phone">
-                    <a href="tel:+91658520035" className="hover:text-accent">
-                      +91 658 520 035
+                    <a href={companyContact.phoneHref} className="hover:text-accent">
+                      {company.phone.display}
                     </a>
                   </ContactRow>
                   <ContactRow icon="fa-solid fa-envelope">
-                    <a href="mailto:info@domainname.com" className="hover:text-accent">
-                      info@domainname.com
+                    <a href={companyContact.emailHref} className="hover:text-accent">
+                      {company.email}
                     </a>
                   </ContactRow>
                   <ContactRow icon="fa-solid fa-location-dot">
-                    123 High Street, Springfield, London SW1A 1A, United Kingdom.
+                    {company.address}
                   </ContactRow>
                 </div>
               </FooterColumn>
@@ -96,16 +97,16 @@ export function Footer() {
           </div>
 
           <div className="mt-[60px] flex flex-col gap-4 border-t border-white/10 py-[50px] text-white sm:flex-row sm:items-center sm:justify-between">
-            <p className="m-0">Copyright © 2025 All Rights Reserved.</p>
+            <p className="m-0">{years} © Toate drepturile rezervate.</p>
             <ul className="m-0 flex list-disc flex-wrap gap-x-8 gap-y-2 pl-5 marker:text-white">
               <li>
                 <a href="#contact" className="capitalize hover:text-accent">
-                  Privacy policy
+                  Politica de confidențialitate
                 </a>
               </li>
               <li>
                 <a href="#contact" className="capitalize hover:text-accent">
-                  Term's & condition
+                  Termeni și condiții
                 </a>
               </li>
             </ul>

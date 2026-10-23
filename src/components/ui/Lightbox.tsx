@@ -29,20 +29,20 @@ export function Lightbox({ images, index, onClose, onChange }: LightboxProps) {
         onClick={(event) => event.stopPropagation()}
         role="dialog"
         aria-modal="true"
-        aria-label="Image gallery"
+        aria-label="Galerie foto"
       >
         <button
           type="button"
           onClick={onClose}
           className="absolute -top-12 right-0 flex h-10 w-10 items-center justify-center rounded-full bg-white text-primary"
-          aria-label="Close gallery"
+          aria-label="Închide galeria"
         >
           <i className="fa-solid fa-xmark" />
         </button>
         <img src={images[index]} alt="" className="max-h-[78vh] w-full rounded-xl object-contain" />
         <button
           type="button"
-          aria-label="Previous image"
+          aria-label="Imaginea anterioară"
           onClick={() => onChange((index - 1 + images.length) % images.length)}
           className="absolute top-1/2 left-3 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-white text-white"
         >
@@ -50,7 +50,7 @@ export function Lightbox({ images, index, onClose, onChange }: LightboxProps) {
         </button>
         <button
           type="button"
-          aria-label="Next image"
+          aria-label="Imaginea următoare"
           onClick={() => onChange((index + 1) % images.length)}
           className="absolute top-1/2 right-3 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-white text-white"
         >

@@ -3,18 +3,19 @@ import { PageBanner } from "../components/layout/PageBanner"
 import { CategoryList, HelpCard } from "../components/layout/Sidebar"
 import { Accordion } from "../components/ui/Accordion"
 import { Container } from "../components/ui/SectionHeading"
+import { company } from "../data/company"
 import { faqGroups } from "../data/content"
 import { usePageTitle } from "../hooks/usePageTitle"
 
 export function FaqPage() {
   const { hash } = useLocation()
-  usePageTitle("FAQs - Waveup")
+  usePageTitle(`Întrebări frecvente - ${company.name}`)
 
   return (
     <main>
       <PageBanner
-        title="Frequently asked question"
-        crumbs={[{ label: "home", href: "/" }, { label: "FAQs" }]}
+        title="Întrebări frecvente"
+        crumbs={[{ label: "acasă", href: "/" }, { label: "întrebări frecvente" }]}
       />
       <section className="py-[100px]">
         <Container>

@@ -10,7 +10,7 @@ export function Promise() {
             <div className="relative pr-0 sm:pr-[120px] lg:pr-[190px]">
               <img
                 src="/images/promise-img-1.jpg"
-                alt="Finished pool project"
+                alt="Lucrare de curățenie finalizată"
                 className="aspect-[1/1.042] w-full rounded-xl object-cover"
               />
               <div className="group absolute bottom-0 left-[30px] z-20 w-[196px] translate-y-1/2 overflow-hidden rounded-xl bg-white px-6 py-[30px] text-center">
@@ -18,21 +18,21 @@ export function Promise() {
                 <h2 className="relative z-10 mb-1 text-[46px] text-primary transition-colors group-hover:text-white">
                   16 K
                 </h2>
-                <p className="relative z-10 m-0 transition-colors group-hover:text-white">Projects completed efficiently</p>
+                <p className="relative z-10 m-0 transition-colors group-hover:text-white">servicii disponibile</p>
               </div>
             </div>
             <img
               src="/images/promise-img-2.jpg"
-              alt="Pool water detail"
+              alt="Detaliu curățenie profesională"
               className="relative z-10 -mt-24 ml-auto aspect-[1/1.12] w-full max-w-[350px] rounded-xl object-cover sm:-mt-52"
             />
           </div>
 
           <div>
             <SectionHeading
-              eyebrow="our promise to you"
-              title="Unmatched quality service for sparkling"
-              description="We deliver unparalleled quality and excellence, ensuring every aspect of our service meets the highest standards. Our commitment to precision, efficiency, and client satisfaction guarantees outstanding results that leave a lasting impact."
+              eyebrow="promisiunea noastră"
+              title="Calitate fără compromisuri, la fiecare lucrare"
+              description="Curățăm atent fiecare detaliu, cu echipamente profesionale și soluții potrivite, pentru rezultate care se văd."
             />
             <div className="mt-10 grid gap-[30px] sm:grid-cols-2">
               {promiseItems.map((item) => (

@@ -9,8 +9,8 @@ export function Team() {
         <div className="mb-16 lg:mb-20">
           <SectionHeading
             align="center"
-            eyebrow="our team"
-            title="Meet our dedicated experts committed exceptional pool care"
+            eyebrow="echipa noastră"
+            title="Cunoaște specialiștii dedicați curățeniei profesionale"
           />
         </div>
         <div className="grid gap-[30px] sm:grid-cols-2 lg:grid-cols-4">

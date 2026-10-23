@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom"
+import { company, companyContact } from "../../data/company"
 
 type SidebarLink = {
   label: string
@@ -53,19 +54,19 @@ export function HelpCard() {
       <div className="relative z-10">
         <img src="/images/logo.svg" alt="" className="mb-[30px] w-[190px]" />
         <h3 className="mb-10 text-xl leading-snug font-semibold text-white">
-          Need help? we are always here to assist you with expert care
+          Ai nevoie de ajutor? Suntem aici pentru a-ți oferi soluția potrivită.
         </h3>
         <div className="rounded-[20px] bg-white/10 p-[30px] backdrop-blur-md">
           <div className="mb-5 border-b border-white/10 pb-5">
-            <h3 className="mb-2.5 text-xl font-semibold text-white">Need help!</h3>
-            <a href="tel:+08658520035" className="text-white transition-colors hover:text-accent">
-              +08 658 520 035
+            <h3 className="mb-2.5 text-xl font-semibold text-white">Ai nevoie de ajutor?</h3>
+            <a href={companyContact.phoneHref} className="text-white transition-colors hover:text-accent">
+              {company.phone.display}
             </a>
           </div>
           <div>
-            <h3 className="mb-2.5 text-xl font-semibold text-white">E-mail now</h3>
-            <a href="mailto:info@domainname.com" className="text-white transition-colors hover:text-accent">
-              info@domainname.com
+            <h3 className="mb-2.5 text-xl font-semibold text-white">Scrie-ne</h3>
+            <a href={companyContact.emailHref} className="text-white transition-colors hover:text-accent">
+              {company.email}
             </a>
           </div>
         </div>

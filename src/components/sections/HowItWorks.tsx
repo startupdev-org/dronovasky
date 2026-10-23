@@ -9,8 +9,8 @@ export function HowItWorks() {
           <SectionHeading
             align="center"
             tone="light"
-            eyebrow="how it work"
-            title="How it works easy pool care process"
+            eyebrow="cum lucrăm"
+            title="Cum lucrăm: un proces simplu și eficient"
           />
         </div>
 
@@ -41,9 +41,9 @@ export function HowItWorks() {
         </div>
 
         <p className="mt-[30px] mb-0 text-center text-white">
-          24/7 Customer Support Ready Whenever You Need Us.{" "}
+          Suntem gata să te ajutăm.{" "}
           <SectionLink href="/contact" tone="light">
-            get free quote
+            Solicită o ofertă
           </SectionLink>
         </p>
       </Container>

@@ -14,6 +14,7 @@ import {
   serviceSolutions,
   sidebarServices,
 } from "../data/content"
+import { company } from "../data/company"
 import { usePageTitle } from "../hooks/usePageTitle"
 import { NotFoundPage } from "./NotFoundPage"
 
@@ -23,7 +24,7 @@ export function ServiceDetailsPage() {
   const { openVideo } = useOutletContext<SiteOutletContext>()
   const slides = serviceCatalog.slice(0, 3).map((item) => item.image)
   const [slide, setSlide] = useState(0)
-  usePageTitle(service ? `${service.title} - Waveup` : "Page not found - Waveup")
+  usePageTitle(service ? `${service.title} - ${company.name}` : `Pagina nu a fost găsită - ${company.name}`)
 
   if (!service) return <NotFoundPage />
 
@@ -31,14 +32,14 @@ export function ServiceDetailsPage() {
     <main>
       <PageBanner
         title={service.title}
-        crumbs={[{ label: "home", href: "/" }, { label: "services", href: "/services" }, { label: service.title }]}
+        crumbs={[{ label: "acasă", href: "/" }, { label: "servicii", href: "/services" }, { label: service.title }]}
       />
       <section className="py-[100px]">
         <Container>
           <div className="grid gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,2fr)] lg:gap-10">
             <aside className="lg:sticky lg:top-28 lg:self-start lg:mr-5">
               <CategoryList
-                title="Services We Provide"
+                title="Serviciile noastre"
                 activeHref={`/services/${service.slug}`}
                 items={sidebarServices.map((item) => ({
                   label: item.title,
@@ -53,7 +54,7 @@ export function ServiceDetailsPage() {
                 <img src={slides[slide]} alt="" className="aspect-[1/0.574] w-full object-cover" />
                 <button
                   type="button"
-                  aria-label="Previous image"
+                  aria-label="Imaginea anterioară"
                   onClick={() => setSlide((current) => (current - 1 + slides.length) % slides.length)}
                   className="absolute top-1/2 left-6 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-white text-white transition-colors hover:bg-white hover:text-primary"
                 >
@@ -61,7 +62,7 @@ export function ServiceDetailsPage() {
                 </button>
                 <button
                   type="button"
-                  aria-label="Next image"
+                  aria-label="Imaginea următoare"
                   onClick={() => setSlide((current) => (current + 1) % slides.length)}
                   className="absolute top-1/2 right-6 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-white text-white transition-colors hover:bg-white hover:text-primary"
                 >
@@ -71,30 +72,20 @@ export function ServiceDetailsPage() {
 
               <div className="space-y-5 text-muted">
                 <p>
-                  {service.title} are essential for maintaining a hygienic, organized, and efficient workspace or living
-                  environment. Our comprehensive cleaning solutions go beyond surface-level tidying to ensure every nook
-                  and corner is thoroughly sanitized and refreshed. We utilize industry-leading cleaning techniques,
-                  high-quality disinfectants, and advanced equipment to eliminate dust, grime, and harmful bacteria,
-                  creating a healthier space for employees, customers, or residents. Our deep cleaning process covers
-                  floors, carpets, windows, furniture, and high-touch surfaces.
+                  {service.title} este realizată cu atenție la fiecare detaliu. Folosim echipamente profesionale și soluții potrivite pentru fiecare suprafață, pentru a elimina murdăria, praful și urmele persistente.
                 </p>
                 <p>
-                  Our deep cleaning process covers floors, carpets, windows, furniture, and high-touch surfaces, ensuring
-                  a spotless and germ-free environment. Whether for offices, homes, or commercial spaces, our expert
-                  cleaning team is committed to delivering exceptional results that enhance comfort, safety, and overall
-                  well-being.
+                  Ne ocupăm de case, oficii, spații comerciale și clădiri, astfel încât spațiul să rămână curat, îngrijit și pregătit de utilizare.
                 </p>
               </div>
 
               <div className="mt-[60px]">
                 <h2 className="mb-5 text-[32px] leading-tight font-semibold text-primary sm:text-[46px]">
-                  Comprehensive care solutions
+                  Soluții complete de curățenie
                 </h2>
                 <CheckList items={serviceCarePoints} columns className="my-10" />
                 <p>
-                  Our deep cleaning services go beyond surface-level tidiness, ensuring a thorough and hygienic
-                  environment. With expert techniques and high-quality products, we deliver exceptional results tailored
-                  to your specific needs.
+                  Alegem metoda și produsele potrivite în funcție de lucrare, pentru rezultate eficiente și de durată.
                 </p>
                 <div className="mt-10 grid gap-8 rounded-xl bg-accent p-[30px] sm:grid-cols-3">
                   {serviceSolutions.map((item) => (
@@ -108,11 +99,10 @@ export function ServiceDetailsPage() {
 
               <div className="mt-[60px]">
                 <h2 className="mb-5 text-[32px] leading-tight font-semibold text-primary sm:text-[46px]">
-                  Professional Step-by-Step Pool Care
+                  Cum realizăm lucrarea
                 </h2>
                 <p className="mb-10">
-                  Our deep cleaning service removes dirt, debris, and algae buildup, ensuring your pool stays spotless
-                  and safe. Using advanced techniques and eco-friendly solutions.
+                  Un proces simplu, de la solicitarea ofertei până la rezultatul final.
                 </p>
                 <div className="grid gap-[30px] md:grid-cols-3">
                   {serviceDetailSteps.map((step) => (
@@ -131,35 +121,33 @@ export function ServiceDetailsPage() {
                   ))}
                 </div>
                 <p className="mt-8 mb-0 text-center text-muted">
-                  24/7 Customer Support Ready Whenever You Need Us. <SectionLink href="/contact">get free quote</SectionLink>
+                  Suntem gata să te ajutăm. <SectionLink href="/contact">Solicită o ofertă</SectionLink>
                 </p>
               </div>
 
               <div className="mt-[60px]">
                 <h2 className="mb-5 text-[32px] leading-tight font-semibold text-primary sm:text-[46px]">
-                  Comprehensive pool care solutions
+                  Curățenie realizată profesionist
                 </h2>
                 <p>
-                  Our deep cleaning service removes dirt, debris, and algae buildup, ensuring your pool stays spotless
-                  and safe. Using advanced techniques and eco-friendly solutions, we restore water clarity and maintain
-                  a hygienic swimming environment. Enjoy a fresh, crystal-clear pool with our expert care!
+                  Curățăm praful de construcție, murdăria depusă și urmele de pe geamuri, fațade și pardoseli, pentru un rezultat impecabil.
                 </p>
                 <div className="relative my-10 overflow-hidden rounded-xl">
-                  <img src="/images/service-video-image.jpg" alt="Pool care video" className="aspect-[1/0.45] w-full object-cover sm:aspect-[1/0.338]" />
+                  <img src="/images/service-video-image.jpg" alt="Video despre serviciile noastre" className="aspect-[1/0.45] w-full object-cover sm:aspect-[1/0.338]" />
                   <span className="absolute inset-0 bg-primary/60" />
                   <PlayButton onClick={openVideo} size="lg" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
                 </div>
                 <CheckList
                   items={[
-                    "Custom Maintenance Plans Tailored to Your Pool's.",
-                    "Using Eco-Friendly and Safe Cleaning Products for",
+                    "Echipamente profesionale și soluții potrivite pentru fiecare suprafață.",
+                    "Evaluare la necesitate și ofertă calculată individual.",
                   ]}
                 />
               </div>
 
               <div className="mt-[60px]">
                 <h2 className="mb-10 text-[32px] leading-tight font-semibold text-primary sm:text-[46px]">
-                  Answer to your most common question
+                  Răspunsuri la cele mai frecvente întrebări
                 </h2>
                 <Accordion items={detailFaqs} />
               </div>

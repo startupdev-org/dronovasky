@@ -1,3 +1,5 @@
+import { company, companyContact } from "./company"
+
 export type NavChild = {
   label: string
   href: string
@@ -11,36 +13,26 @@ export type NavItem = {
 
 export const navItems: NavItem[] = [
   {
-    label: "Home",
+    label: "Acasă",
     href: "/",
     children: [
-      { label: "Home - Main", href: "/" },
-      { label: "Home - Video", href: "/" },
-      { label: "Home - Slider", href: "/" },
+      { label: "Acasă", href: "/" },
     ],
   },
-  { label: "About Us", href: "/about" },
-  { label: "Services", href: "/services" },
-  { label: "Blog", href: "/#blog" },
+  { label: "Despre noi", href: "/about" },
+  { label: "Servicii", href: "/services" },
+  { label: "Portofoliu", href: "/projects" },
   {
-    label: "Pages",
+    label: "Mai multe",
     href: "/services",
     children: [
-      { label: "Service Details", href: "/services/deep-cleaning" },
-      { label: "Blog Details", href: "/#blog" },
-      { label: "Our Projects", href: "/projects" },
-      { label: "Projects details", href: "/projects" },
-      { label: "Our Team", href: "/about#team" },
-      { label: "Team Details", href: "/about#team" },
-      { label: "Pricing Plan", href: "/#pricing" },
-      { label: "Testimonials", href: "/#testimonials" },
-      { label: "Image Gallery", href: "/gallery" },
-      { label: "Video Gallery", href: "/videos" },
-      { label: "FAQs", href: "/faqs" },
-      { label: "404", href: "/404" },
+      { label: "Servicii", href: "/services" },
+      { label: "Portofoliu", href: "/projects" },
+      { label: "Galerie foto", href: "/gallery" },
+      { label: "Întrebări frecvente", href: "/faqs" },
     ],
   },
-  { label: "Contact Us", href: "/contact" },
+  { label: "Contacte", href: "/contact" },
 ]
 
 export const clientAvatars = [
@@ -57,14 +49,14 @@ export type ServiceItem = {
 }
 
 export const serviceCatalog: ServiceItem[] = [
-  { title: "Water Testing & Balancing", slug: "water-testing", image: "/images/service-image-1.jpg" },
-  { title: "Deep Cleaning Services", slug: "deep-cleaning", image: "/images/service-image-2.jpg" },
-  { title: "Equipment & Inspection", slug: "equipment-inspection", image: "/images/service-image-3.jpg" },
-  { title: "Emergency Pool Services", slug: "emergency-pool", image: "/images/service-image-4.jpg" },
-  { title: "Advanced Pool Maintenance", slug: "advanced-maintenance", image: "/images/service-image-5.jpg" },
-  { title: "Precision Water Treatment", slug: "precision-treatment", image: "/images/service-image-6.jpg" },
-  { title: "Efficient Tile Restoration", slug: "tile-restoration", image: "/images/service-image-7.jpg" },
-  { title: "Quick Damage Check", slug: "damage-check", image: "/images/service-image-8.jpg" },
+  { title: "Curățenie exterioară cu drone", slug: "curatenie-drone", image: "/images/service-image-1.jpg" },
+  { title: "Curățenie după reparație", slug: "dupa-reparatie", image: "/images/service-image-2.jpg" },
+  { title: "Curățenie generală", slug: "curatenie-generala", image: "/images/service-image-3.jpg" },
+  { title: "Curățare chimică a mobilierului moale", slug: "mobilier-moale", image: "/images/service-image-4.jpg" },
+  { title: "Spălare geamuri și vitrine", slug: "geamuri-vitrine", image: "/images/service-image-5.jpg" },
+  { title: "Spălare fațade", slug: "spalare-fatade", image: "/images/service-image-6.jpg" },
+  { title: "Spălare pavaj, terase și parcări", slug: "pavaj-terase", image: "/images/service-image-7.jpg" },
+  { title: "Curățare acoperișuri și jgheaburi", slug: "acoperisuri-jgheaburi", image: "/images/service-image-8.jpg" },
 ]
 
 export const services = serviceCatalog.slice(0, 4)
@@ -72,55 +64,55 @@ export const services = serviceCatalog.slice(0, 4)
 export const sidebarServices = serviceCatalog.slice(0, 5)
 
 export const whyChoose = [
-  "Eco-Friendly Cleaning Solutions",
-  "Advanced Equipment & Techniques",
-  "Affordable & Transparent Pricing",
-  "24/7 Emergency Pool Assistance",
+  "Echipamente profesionale",
+  "Soluții potrivite pentru fiecare suprafață",
+  "Evaluare la necesitate",
+  "Răspuns rapid la solicitări",
 ]
 
 export const whyStats = [
-  { value: "5K+", label: "Happy Customer" },
-  { value: "25+", label: "Years of Experience" },
-  { value: "500+", label: "Pools Serviced" },
+  { value: "15+", label: "servicii disponibile" },
+  { value: "10 min", label: "timp de răspuns" },
+  { value: "100%", label: "rezultate garantate" },
 ]
 
 export const benefits = [
   {
-    title: "Sparkling Water",
-    text: "Sparkling Water Enjoy crystal-clear water with our meticulous pool a always looks inviting.",
+    title: "Curățenie atentă",
+    text: "Curățăm atent fiecare detaliu, pentru un spațiu impecabil.",
     icon: "/images/icon-benefit-item-1.svg",
   },
   {
-    title: "Safe, Balanced Chemistry",
-    text: "Sparkling Water Enjoy crystal-clear water with our meticulous pool a always looks inviting.",
+    title: "Soluții profesionale",
+    text: "Folosim soluții adaptate materialului și suprafeței.",
     icon: "/images/icon-benefit-item-2.svg",
   },
   {
-    title: "Hassle-Free Maintenance",
-    text: "Sparkling Water Enjoy crystal-clear water with our meticulous pool a always looks inviting.",
+    title: "Servicii complete",
+    text: "Pentru case, oficii, spații comerciale și clădiri.",
     icon: "/images/icon-benefit-item-3.svg",
   },
   {
-    title: "Extended Pool Life",
-    text: "Sparkling Water Enjoy crystal-clear water with our meticulous pool a always looks inviting.",
+    title: "Rezultate vizibile",
+    text: "Spații curate, îngrijite și pregătite de utilizare.",
     icon: "/images/icon-benefit-item-4.svg",
   },
 ]
 
 export const benefitPoints = [
-  "Sparkling Water, Always Refreshing and Inviting",
-  "Safe, Balanced Water Chemistry for Healthy Swimming",
-  "Trusted, Skilled Technicians Dedicated to Quality Service",
+  "Fără schele sau nacelă pentru lucrările la înălțime",
+  "Mai rapid cu tehnologia dronelor",
+  "Echipă instruită și autorizată",
 ]
 
-export type ProjectCategory = "all" | "residential" | "repairs" | "cleaning" | "maintenance"
+export type ProjectCategory = "all" | "locuinte" | "comercial" | "exterior" | "dupa_reparatie"
 
 export const projectFilters: { id: ProjectCategory; label: string }[] = [
-  { id: "all", label: "all" },
-  { id: "residential", label: "Residential" },
-  { id: "repairs", label: "Repairs" },
-  { id: "cleaning", label: "Cleaning" },
-  { id: "maintenance", label: "Maintenance" },
+  { id: "all", label: "toate" },
+  { id: "locuinte", label: "locuințe" },
+  { id: "comercial", label: "comercial" },
+  { id: "exterior", label: "exterior" },
+  { id: "dupa_reparatie", label: "după reparație" },
 ]
 
 export type Project = {
@@ -132,39 +124,39 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    title: "Stunning Residential",
-    category: "residential",
-    label: "Residential",
+    title: "Curățenie pentru locuințe",
+    category: "locuinte",
+    label: "locuințe",
     image: "/images/project-1.jpg",
   },
   {
-    title: "Commercial Pool Excellence",
-    category: "repairs",
-    label: "Repairs",
+    title: "Spații comerciale impecabile",
+    category: "comercial",
+    label: "comercial",
     image: "/images/project-2.jpg",
   },
   {
-    title: "Expert Repairs and Restorations",
-    category: "cleaning",
-    label: "cleaning",
+    title: "Curățenie exterioară cu drone",
+    category: "exterior",
+    label: "exterior",
     image: "/images/project-3.jpg",
   },
   {
-    title: "Deep Cleaning for Crystal Clarity",
-    category: "cleaning",
-    label: "cleaning",
+    title: "Curățenie după reparație",
+    category: "dupa_reparatie",
+    label: "după reparație",
     image: "/images/project-4.jpg",
   },
   {
-    title: "Seasonal Maintenance Made Easy",
-    category: "maintenance",
-    label: "Maintenance",
+    title: "Spălare fațade și geamuri",
+    category: "exterior",
+    label: "exterior",
     image: "/images/project-5.jpg",
   },
   {
-    title: "Chemical Balance Mastery",
-    category: "residential",
-    label: "Residential",
+    title: "Curățare profesională a tapiseriei",
+    category: "locuinte",
+    label: "locuințe",
     image: "/images/project-6.jpg",
   },
 ]
@@ -172,21 +164,21 @@ export const projects: Project[] = [
 export const pageProjects: Project[] = [
   ...projects,
   {
-    title: "Effective Maintenance Healthy Pool",
-    category: "maintenance",
-    label: "Maintenance",
+    title: "Pavaj, terase și parcări curate",
+    category: "exterior",
+    label: "exterior",
     image: "/images/project-7.jpg",
   },
   {
-    title: "Advanced Repairs for Clear Water",
-    category: "repairs",
-    label: "Repairs",
+    title: "Curățare acoperișuri și jgheaburi",
+    category: "exterior",
+    label: "exterior",
     image: "/images/project-8.jpg",
   },
   {
-    title: "Reliable Residential for Water",
-    category: "residential",
-    label: "Residential",
+    title: "Curățenie pentru oficii",
+    category: "comercial",
+    label: "comercial",
     image: "/images/project-9.jpg",
   },
 ]
@@ -194,94 +186,94 @@ export const pageProjects: Project[] = [
 export const steps = [
   {
     no: "01",
-    title: "Book a Service",
-    text: "Book a Service Easily schedule a your pool cleaning at a time.",
+    title: "Trimite solicitarea",
+    text: "Trimite poze sau video cu obiectul pentru o ofertă exactă.",
     image: "/images/how-work-image-1.jpg",
   },
   {
     no: "02",
-    title: "Personalized Plan",
-    text: "Book a Service Easily schedule a your pool cleaning at a time.",
+    title: "Evaluăm lucrarea",
+    text: "La necesitate, ne deplasăm pentru evaluare.",
     image: "/images/how-work-image-2.jpg",
   },
   {
     no: "03",
-    title: "Expert Cleaning",
-    text: "Book a Service Easily schedule a your pool cleaning at a time.",
+    title: "Curățăm profesional",
+    text: "Lucrăm cu echipamente profesionale și soluții potrivite.",
     image: "/images/how-work-image-3.jpg",
   },
   {
     no: "04",
-    title: "Ongoing Support",
-    text: "Book a Service Easily schedule a your pool cleaning at a time.",
+    title: "Te bucuri de rezultat",
+    text: "Spațiul rămâne curat, îngrijit și pregătit de utilizare.",
     image: "/images/how-work-image-4.jpg",
   },
 ]
 
 export const skills = [
-  { title: "Cleaning", value: 82 },
-  { title: "Maintenance", value: 92 },
+  { title: "Curățenie", value: 95 },
+  { title: "Profesionalism", value: 100 },
 ]
 
 export const planFeatures = [
-  "Essential Pool Care",
-  "Comprehensive Pool Support",
-  "Expert Fixes Guaranteed",
-  "Immediate Attention When Needed",
+  "Preț calculat individual",
+  "Evaluare la necesitate",
+  "Soluții profesionale",
+  "Rezultate garantate",
 ]
 
 export const plans = [
   {
-    name: "Basic Plan",
-    price: "$10",
+    name: "Pachet de bază",
+    price: "de la 70 lei",
     icon: "/images/icon-pricing-item-1.svg",
     featured: false,
   },
   {
-    name: "standard plan",
-    price: "$20",
+    name: "Pachet standard",
+    price: "la ofertă",
     icon: "/images/icon-pricing-item-2.svg",
     featured: true,
   },
   {
-    name: "premium plan",
-    price: "$30",
+    name: "Pachet premium",
+    price: "individual",
     icon: "/images/icon-pricing-item-3.svg",
     featured: false,
   },
 ]
 
 export const pricingNotes = [
-  { icon: "/images/icon-pricing-benefit-1.svg", label: "Get 30 day free trial" },
-  { icon: "/images/icon-pricing-benefit-2.svg", label: "No any hidden fees pay" },
-  { icon: "/images/icon-pricing-benefit-3.svg", label: "You can cancel anytime" },
+  { icon: "/images/icon-pricing-benefit-1.svg", label: "Ofertă personalizată" },
+  { icon: "/images/icon-pricing-benefit-2.svg", label: "Preț transparent" },
+  { icon: "/images/icon-pricing-benefit-3.svg", label: "Consultare rapidă" },
 ]
 
 export const testimonials = [
   {
-    name: "Jenny Wilson",
+    name: "Ana V., Chișinău",
     image: "/images/author-1.jpg",
     quote:
-      "My pool has never looked better! I especially love how they take the time to explain what they're doing and ensure everything is balanced correctly. Truly a worry-free experience!",
+      "Serviciul cu drone ne-a salvat timp și buget. Rezultatul a fost impecabil.",
   },
   {
-    name: "Sophia Reynolds",
+    name: "Client Dronova Sky",
     image: "/images/author-2.jpg",
     quote:
-      "My pool has never looked better! I especially love how they take the time to explain what they're doing and ensure everything is balanced correctly. Truly a worry-free experience!",
+      "O echipă atentă, punctuală și profesionistă. Spațiul a rămas impecabil.",
   },
   {
-    name: "Michael Carter",
+    name: "Client Dronova Sky",
     image: "/images/author-3.jpg",
     quote:
-      "My pool has never looked better! I especially love how they take the time to explain what they're doing and ensure everything is balanced correctly. Truly a worry-free experience!",
+      "Curățenie profesionistă, cu atenție la fiecare detaliu.",
   },
 ]
 
 export const testimonialStats = [
-  { value: "99%", label: "Committed to delivering excellence satisfaction." },
-  { value: "10K+", label: "Our customers inspire our sustainable mission." },
-  { value: "50K+", label: "Our customers inspire our sustainable vision." },
+  { value: "3x", label: "mai rapid cu drone" },
+  { value: "15+", label: "servicii disponibile" },
+  { value: "100%", label: "rezultate garantate" },
 ]
 
 export const partnerLogos = [
@@ -297,51 +289,47 @@ export const partnerLogos = [
 
 export const faqs = [
   {
-    question: "How often should my pool be cleaned?",
-    answer:
-      "Our regular maintenance includes thorough skimming, vacuuming, and brushing to keep your pool spotless.",
+    question: "Ce servicii oferiți?",
+    answer: "Oferim curățenie cu drone, curățenie după reparație, curățenie generală, tapiserie, spălare geamuri, fațade, pavaj și multe altele.",
   },
   {
-    question: "What services are included in regular maintenance?",
-    answer:
-      "Our regular maintenance includes thorough skimming, vacuuming, and brushing to keep your pool spotless.",
+    question: "Cum pot solicita o ofertă?",
+    answer: "Trimiteți-ne poze sau video cu obiectul. La necesitate, ne deplasăm pentru evaluare.",
   },
   {
-    question: "Do you provide emergency pool services?",
-    answer:
-      "Our regular maintenance includes thorough skimming, vacuuming, and brushing to keep your pool spotless.",
+    question: "Lucrați pentru spații comerciale?",
+    answer: "Da, curățăm case, oficii, spații comerciale și clădiri.",
   },
   {
-    question: "How do I schedule or change a service?",
-    answer:
-      "Our regular maintenance includes thorough skimming, vacuuming, and brushing to keep your pool spotless.",
+    question: "Cum vă pot contacta?",
+    answer: "Ne puteți suna sau scrie pe WhatsApp la +373 79 893 715.",
   },
 ]
 
 export const posts = [
   {
-    title: "How to Extend the Life of Your Pool",
-    excerpt: "Proper maintenance can significantly increase your pool's lifespan.",
+    title: "Curățenie după reparație",
+    excerpt: "Eliminăm rapid praful și reziduurile de construcție.",
     image: "/images/post-1.jpg",
   },
   {
-    title: "Signs Your Pool Needs Professional",
-    excerpt: "Proper maintenance can significantly increase your pool's lifespan.",
+    title: "Curățenie exterioară cu drone",
+    excerpt: "Ajungem acolo unde echipele tradiționale nu pot.",
     image: "/images/post-2.jpg",
   },
   {
-    title: "Benefits Regular Pool Maintenance",
-    excerpt: "Proper maintenance can significantly increase your pool's lifespan.",
+    title: "Curățare chimică a tapiseriei",
+    excerpt: "Împrospătăm canapelele și fotoliile prin curățare profesională.",
     image: "/images/post-3.jpg",
   },
 ]
 
 export const quickLinks = [
-  { label: "Home", href: "/" },
-  { label: "About us", href: "/about" },
-  { label: "services", href: "/services" },
-  { label: "blog", href: "/#blog" },
-  { label: "Contact us", href: "/contact" },
+  { label: "Acasă", href: "/" },
+  { label: "Despre noi", href: "/about" },
+  { label: "Servicii", href: "/services" },
+  { label: "Portofoliu", href: "/projects" },
+  { label: "Contacte", href: "/contact" },
 ]
 
 export const footerServices = sidebarServices.map((service) => ({
@@ -354,10 +342,10 @@ export const galleryImages = Array.from({ length: 9 }, (_, index) => `/images/ga
 export const videoThumbs = [3, 5, 2, 1, 4, 9, 6, 8, 7].map((id) => `/images/gallery-${id}.jpg`)
 
 export const teamMembers = [
-  { name: "David reynolds", role: "Senior Pool Technician", image: "/images/team-1.jpg" },
-  { name: "Emily Watson", role: "Pool Maintenance Coordinator", image: "/images/team-2.jpg" },
-  { name: "David reynolds", role: "Senior Pool Technician", image: "/images/team-3.jpg" },
-  { name: "David reynolds", role: "Senior Pool Technician", image: "/images/team-4.jpg" },
+  { name: "Dronova Sky Cleaning", role: "Echipă de curățenie profesională", image: "/images/team-1.jpg" },
+  { name: "Dronova Sky Cleaning", role: "Specialiști în curățenie", image: "/images/team-2.jpg" },
+  { name: "Dronova Sky Cleaning", role: "Echipă instruită și autorizată", image: "/images/team-3.jpg" },
+  { name: "Dronova Sky Cleaning", role: "Servicii profesionale", image: "/images/team-4.jpg" },
 ]
 
 export const teamSocials = [
@@ -370,167 +358,151 @@ export const teamSocials = [
 export const whatWeSteps = [
   {
     no: "01",
-    title: "Book a advanced cleaning techniques service",
-    text: "We use high-quality equipment and eco-friendly solutions to remove debris, balance chemicals, and maintain crystal-clear water.",
+    title: "Curățenie pentru orice spațiu",
+    text: "Oferim servicii profesionale pentru case, oficii, spații comerciale și clădiri.",
   },
   {
     no: "02",
-    title: "Expert maintenance & repairs",
-    text: "From routine inspections to timely repairs, our skilled technicians handle everything to prevent issues before they arise.",
+    title: "Tehnologie și atenție la detalii",
+    text: "Lucrăm cu echipamente profesionale și soluții potrivite pentru fiecare suprafață.",
   },
 ]
 
 export const promiseItems = [
   {
-    title: "Expert care",
-    text: "Sparkling Water Enjoy crystal-clear water with our meticulous pool a always looks inviting.",
+    title: "Calitate fără compromisuri",
+    text: "Curățăm atent, pentru rezultate impecabile și spații pregătite de utilizare.",
     icon: "/images/icon-promise-item-1.svg",
   },
   {
-    title: "Trusted solutions",
-    text: "Sparkling Water Enjoy crystal-clear water with our meticulous pool a always looks inviting.",
+    title: "Soluții de încredere",
+    text: "Alegem soluția potrivită pentru fiecare lucrare și fiecare suprafață.",
     icon: "/images/icon-promise-item-2.svg",
   },
 ]
 
 export const serviceSolutions = [
-  { title: "Custom Maintenance Plans Tailored", icon: "/images/icon-service-solution-1.svg" },
-  { title: "Custom Pool Care Solutions", icon: "/images/icon-service-solution-2.svg" },
-  { title: "Keeping Your Pool Pristine Your Way", icon: "/images/icon-service-solution-3.svg" },
+  { title: "Soluții adaptate lucrării", icon: "/images/icon-service-solution-1.svg" },
+  { title: "Echipamente profesionale", icon: "/images/icon-service-solution-2.svg" },
+  { title: "Rezultate impecabile", icon: "/images/icon-service-solution-3.svg" },
 ]
 
 export const serviceCarePoints = [
-  "Tailored service plans designed to meet the unique.",
-  "Experienced professionals dedicated to ensuring.",
-  "Advanced cleaning techniques and high-quality.",
-  "Timely, efficient, and hassle-free service delivery for.",
+  "Curățăm praful de construcție, murdăria depusă și urmele de pe sticlă.",
+  "Spălăm fațade, geamuri, vitrine, pavaj, terase și parcări.",
+  "Fără schele sau nacelă pentru curățenia exterioară cu drone.",
+  "Timp de execuție redus și rezultate profesionale.",
 ]
 
 export const serviceDetailSteps = [
   {
     no: "01",
-    title: "Book a Service",
-    text: "Book a Service Easily schedule a your pool cleaning at a time.",
+    title: "Solicită o ofertă",
+    text: "Trimite poze sau video cu obiectul.",
     image: "/images/how-work-image-1.jpg",
   },
   {
     no: "02",
-    title: "Personalized plan",
-    text: "Book a Service Easily schedule a your pool cleaning at a time.",
+    title: "Evaluare personalizată",
+    text: "Stabilim soluția potrivită pentru lucrare.",
     image: "/images/how-work-image-1.jpg",
   },
   {
     no: "03",
-    title: "Expert cleaning",
-    text: "Expert cleaning Easily schedule a your pool cleaning at a time.",
+    title: "Curățenie profesională",
+    text: "Echipa noastră realizează lucrarea atent și eficient.",
     image: "/images/how-work-image-1.jpg",
   },
 ]
 
 export const detailFaqs = [
   {
-    question: "How often should my pool be cleaned?",
-    answer:
-      "Our regular maintenance includes thorough skimming, vacuuming, and brushing to eliminate debris, prevent algae buildup, and maintain crystal-clear water.",
+    question: "Cum se calculează prețul?",
+    answer: "Prețul se calculează individual, în funcție de suprafață și gradul de murdărie.",
   },
   {
-    question: "What services are included in regular maintenance?",
-    answer:
-      "Our regular maintenance includes thorough skimming, vacuuming, and brushing to eliminate debris, prevent algae buildup, and maintain crystal-clear water.",
+    question: "Pentru ce spații oferiți servicii?",
+    answer: "Pentru locuințe, oficii, spații comerciale și clădiri.",
   },
   {
-    question: "Do you provide emergency pool services?",
-    answer:
-      "Our regular maintenance includes thorough skimming, vacuuming, and brushing to eliminate debris, prevent algae buildup, and maintain crystal-clear water.",
+    question: "Este posibilă evaluarea la locație?",
+    answer: "Da, la necesitate ne deplasăm pentru evaluare.",
   },
   {
-    question: "How do I schedule or change a service?",
-    answer:
-      "Our regular maintenance includes thorough skimming, vacuuming, and brushing to eliminate debris, prevent algae buildup, and maintain crystal-clear water.",
+    question: "Cum pot programa lucrarea?",
+    answer: "Contactați-ne telefonic sau pe WhatsApp pentru a stabili detaliile.",
   },
 ]
 
 export const faqGroups = [
   {
     id: "general",
-    title: "General information",
+    title: "Informații generale",
     items: detailFaqs,
   },
   {
     id: "cleaning",
-    title: "Cleaning process",
+    title: "Procesul de curățenie",
     items: [
       {
-        question: "How often should a pool be cleaned?",
-        answer:
-          "Deep cleaning includes thorough skimming, scrubbing pool walls, vacuuming debris, cleaning filters, balancing chemicals, and inspecting equipment for any issues.",
+        question: "Ce include curățenia după reparație?",
+        answer: "Eliminăm praful de construcție, murdăria depusă și urmele de pe sticlă, fațade și pardoseli.",
       },
       {
-        question: "What does a deep cleaning service include?",
-        answer:
-          "Deep cleaning includes thorough skimming, scrubbing pool walls, vacuuming debris, cleaning filters, balancing chemicals, and inspecting equipment for any issues.",
+        question: "Ce include curățenia cu drone?",
+        answer: "Curățare fațade la înălțime, spălare geamuri exterioare și curățare panouri solare, fără schele sau nacelă.",
       },
       {
-        question: "How do you remove algae from a pool?",
-        answer:
-          "Deep cleaning includes thorough skimming, scrubbing pool walls, vacuuming debris, cleaning filters, balancing chemicals, and inspecting equipment for any issues.",
+        question: "Ce tipuri de suprafețe curățați?",
+        answer: "Curățăm geamuri, vitrine, fațade, pavaj, terase, parcări, acoperișuri, jgheaburi și tapiserie.",
       },
       {
-        question: "Do you use eco-friendly cleaning products?",
-        answer:
-          "Deep cleaning includes thorough skimming, scrubbing pool walls, vacuuming debris, cleaning filters, balancing chemicals, and inspecting equipment for any issues.",
+        question: "Folosiți soluții profesionale?",
+        answer: "Da, folosim soluții profesionale adaptate fiecărui material și tip de suprafață.",
       },
     ],
   },
   {
     id: "maintenance",
-    title: "Maintenance tips",
+    title: "Recomandări",
     items: [
       {
-        question: "How can I keep my pool water clear?",
-        answer:
-          "Pool chemical levels should be checked at least twice a week to maintain proper pH, chlorine, and alkalinity levels for safe and clear water.",
+        question: "Când este recomandată curățarea jgheaburilor?",
+        answer: "Periodic, pentru prevenirea infiltrațiilor și blocajelor; menținem scurgerile funcționale și acoperișul curat.",
       },
       {
-        question: "How often should I check my pool's chemical levels?",
-        answer:
-          "Pool chemical levels should be checked at least twice a week to maintain proper pH, chlorine, and alkalinity levels for safe and clear water.",
+        question: "Când este recomandată curățarea tapiseriei?",
+        answer: "Pentru canapele, fotolii și saltele cu pete sau mirosuri.",
       },
       {
-        question: "What is the best way to prevent pool equipment damage?",
-        answer:
-          "Pool chemical levels should be checked at least twice a week to maintain proper pH, chlorine, and alkalinity levels for safe and clear water.",
+        question: "Când este recomandată curățenia cu drone?",
+        answer: "Pentru clădiri înalte și suprafețe greu accesibile, unde sunt necesare rezultate rapide și sigure.",
       },
       {
-        question: "How do I winterize my pool to prevent damage?",
-        answer:
-          "Pool chemical levels should be checked at least twice a week to maintain proper pH, chlorine, and alkalinity levels for safe and clear water.",
+        question: "Cât de repede răspundeți solicitărilor?",
+        answer: "Ne propunem să revenim rapid, de obicei în aproximativ 10 minute.",
       },
     ],
   },
   {
     id: "pricing",
-    title: "Service pricing",
+    title: "Prețuri și ofertare",
     items: [
       {
-        question: "How is pool cleaning service pricing determined?",
-        answer:
-          "Yes, we provide tailored service plans based on your pool's specific needs, ensuring cost-effective and efficient maintenance.",
+        question: "Cum se stabilește prețul?",
+        answer: "Prețul este calculat individual, în funcție de lucrare.",
       },
       {
-        question: "Do you offer customized service plans?",
-        answer:
-          "Yes, we provide tailored service plans based on your pool's specific needs, ensuring cost-effective and efficient maintenance.",
+        question: "Pot primi o ofertă personalizată?",
+        answer: "Da, trimiteți poze sau video cu obiectul și vă oferim detaliile necesare.",
       },
       {
-        question: "Are there any additional charges apart from the service fee?",
-        answer:
-          "Yes, we provide tailored service plans based on your pool's specific needs, ensuring cost-effective and efficient maintenance.",
+        question: "Care sunt prețurile pentru tapiserie?",
+        answer: "De exemplu, curățarea chimică începe de la 70 lei pe unitate; prețul final depinde de articol și dimensiune.",
       },
       {
-        question: "Do you offer discounts for long-term service contracts?",
-        answer:
-          "Yes, we provide tailored service plans based on your pool's specific needs, ensuring cost-effective and efficient maintenance.",
+        question: "Unde vă pot trimite detaliile?",
+        answer: "Ne puteți contacta telefonic, pe WhatsApp sau prin formularul de pe site.",
       },
     ],
   },
@@ -538,20 +510,20 @@ export const faqGroups = [
 
 export const contactCards = [
   {
-    title: "Give us a call",
-    text: "+123 456 7890",
-    href: "tel:123456789",
+    title: "Sună-ne",
+    text: company.phone.display,
+    href: companyContact.phoneHref,
     icon: "/images/icon-phone.svg",
   },
   {
-    title: "Send us message",
-    text: "domainame@gmail.com",
-    href: "mailto:domainame@gmail.com",
+    title: "Scrie-ne",
+    text: company.email,
+    href: companyContact.emailHref,
     icon: "/images/icon-mail.svg",
   },
   {
-    title: "Visit our location",
-    text: "123 High Street, Springfield, London SW1A 1AA, United Kingdom.",
+    title: "Adresa noastră",
+    text: company.address,
     href: "",
     icon: "/images/icon-location.svg",
   },

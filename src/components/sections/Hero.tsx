@@ -27,8 +27,8 @@ export function Hero({ onPlay }: HeroProps) {
             <SectionHeading
               as="h1"
               tone="light"
-              eyebrow="Welcome to waveup."
-              title="Clear Pools with Expert Cleaning Today!"
+              eyebrow="Bine ați venit la DRONOVA SKY CLEANING."
+              title="Curățenie PREMIUM, fără compromisuri!"
               className="mb-0"
             />
             <div className="mt-8 flex items-center gap-5">
@@ -44,7 +44,7 @@ export function Hero({ onPlay }: HeroProps) {
               </div>
               <div className="text-white">
                 <h3 className="mb-1 text-xl font-semibold text-white">820+</h3>
-                <p className="m-0 text-sm tracking-wide uppercase">satisfied customer</p>
+                <p className="m-0 text-sm tracking-wide uppercase">clienți mulțumiți</p>
               </div>
             </div>
           </div>
@@ -53,7 +53,7 @@ export function Hero({ onPlay }: HeroProps) {
             <div className="relative ml-auto max-w-[413px]">
               <img
                 src="/images/hero-image.jpg"
-                alt="Technician cleaning a pool"
+                alt="Echipă de curățenie profesională"
                 className="aspect-[1/0.6635] w-full rounded-xl object-cover"
               />
               <PlayButton onClick={onPlay} className="absolute bottom-[30px] left-[30px]" />
@@ -63,10 +63,10 @@ export function Hero({ onPlay }: HeroProps) {
 
         <div className="mt-16 flex flex-col gap-5 border-t border-white/10 pt-10 lg:mt-20 lg:flex-row lg:items-center lg:justify-between">
           <p className="m-0 text-white lg:w-[40%]">
-            Let's make something great work together. <SectionLink href="#contact" tone="light">Contact Us</SectionLink>
+            Hai să facem spațiul tău impecabil. <SectionLink href="#contact" tone="light">Contactează-ne</SectionLink>
           </p>
           <ul className="m-0 flex list-none flex-wrap justify-start gap-x-[30px] gap-y-3 p-0 lg:w-[60%] lg:justify-end">
-            {["Professional Pool Cleaning", "Filter Cleaning & Maintenance"].map((item) => (
+            {["Curățenie profesională", "Curățenie cu drone"].map((item) => (
               <li key={item} className="relative pl-[30px] text-white">
                 <i className="fa-solid fa-circle-check absolute top-0.5 left-0 text-[18px] text-accent" />
                 {item}

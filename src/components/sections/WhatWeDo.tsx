@@ -9,9 +9,9 @@ export function WhatWeDo() {
         <div className="grid items-center gap-12 lg:grid-cols-2">
           <div className="lg:mr-4">
             <SectionHeading
-              eyebrow="what we do"
-              title="Professional care for healthy & perfect pools"
-              description="Our expert team ensures your pool stays clean, safe, and well-maintained with advanced cleaning techniques and high-quality care, providing a refreshing."
+              eyebrow="ce facem"
+              title="Curățenie profesională pentru orice tip de spațiu"
+              description="Ne ocupăm de curățenie pentru case, oficii, spații comerciale și clădiri, cu rezultate curate și îngrijite."
             />
             <div className="mt-10">
               {whatWeSteps.map((step, index) => (
@@ -35,17 +35,17 @@ export function WhatWeDo() {
           <div className="relative">
             <img
               src="/images/what-we-img-1.jpg"
-              alt="Poolside seating"
+              alt="Spațiu curat"
               className="ml-auto aspect-[1/0.69] w-[calc(100%-40px)] rounded-xl object-cover sm:w-[calc(100%-95px)]"
             />
             <img
               src="/images/what-we-img-2.jpg"
-              alt="Clean swimming pool"
+              alt="Curățenie profesională"
               className="relative z-10 -mt-16 aspect-[1/0.755] w-full max-w-[524px] rounded-3xl border-[9px] border-white object-cover sm:-mt-40"
             />
             <Link
               to="/contact"
-              aria-label="Contact us"
+              aria-label="Contactează-ne"
               className="absolute right-2 bottom-8 z-20 inline-block rounded-full border-[9px] border-white"
             >
               <img

@@ -15,8 +15,8 @@ export function Benefits({ onPlay }: BenefitsProps) {
             <SectionHeading
               align="center"
               tone="light"
-              eyebrow="our benefits"
-              title="Effortless pool care, superior benefits for you"
+              eyebrow="beneficiile noastre"
+              title="Curățenie profesională, cu beneficii reale pentru tine"
             />
           </div>
           <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
@@ -39,7 +39,7 @@ export function Benefits({ onPlay }: BenefitsProps) {
           <div className="relative overflow-hidden rounded-xl">
             <img
               src="/images/benefit-image.jpg"
-              alt="Pool care in progress"
+              alt="Curățenie în desfășurare"
               className="aspect-[1/0.894] w-full object-cover"
             />
             <div className="absolute inset-0 bg-primary/20" />
@@ -48,17 +48,17 @@ export function Benefits({ onPlay }: BenefitsProps) {
 
           <div>
             <p className="mb-10">
-              Effortless Pool Care, Superior Benefits for You Relax and your pool without the hassle. Our expert services provide pristine water, balanced chemistry.
+              Curățenie fără griji, cu rezultate vizibile. Echipa noastră oferă soluții eficiente pentru un spațiu impecabil.
             </p>
             <CheckList items={benefitPoints} className="mb-10" />
             <div className="grid gap-8 rounded-xl bg-accent p-8 sm:grid-cols-2 sm:gap-x-[60px] sm:p-10">
               <div>
                 <img src="/images/icon-benefit-body-item-1.svg" alt="" className="mb-5 h-10 w-10" />
-                <h3 className="text-xl leading-snug text-white">Extended Pool Life Through Expert Care</h3>
+                <h3 className="text-xl leading-snug text-white">Rezultate impecabile prin atenție la detalii</h3>
               </div>
               <div className="relative sm:before:absolute sm:before:top-0 sm:before:-left-[30px] sm:before:h-full sm:before:w-px sm:before:bg-white/10">
                 <img src="/images/icon-benefit-body-item-2.svg" alt="" className="mb-5 h-10 w-10" />
-                <h3 className="text-xl leading-snug text-white">Hassle-Free Reliable Scheduling</h3>
+                <h3 className="text-xl leading-snug text-white">Programare simplă și răspuns rapid</h3>
               </div>
             </div>
           </div>

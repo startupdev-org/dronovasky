@@ -9,9 +9,9 @@ export function WhyChoose() {
         <div className="grid items-center gap-14 lg:grid-cols-2">
           <div className="lg:mr-[15px]">
             <SectionHeading
-              eyebrow="why choose us"
-              title="Reliable pool care for clean & clear, healthy water!"
-              description="We provide expert pool cleaning and maintenance to keep your water crystal clear, safe, and healthy. Enjoy a hassle-free, refreshing swimming experience all year round!"
+              eyebrow="de ce noi"
+              title="Curățenie de încredere pentru spații impecabile!"
+              description="Lucrăm atent, cu echipamente profesionale și soluții potrivite pentru fiecare suprafață, pentru rezultate de care să te bucuri."
             />
             <CheckList items={whyChoose} columns />
             <div className="mt-10 grid grid-cols-3 gap-6 border-t border-line pt-10">
@@ -31,26 +31,26 @@ export function WhyChoose() {
             <div className="grid content-start gap-[30px]">
               <img
                 src="/images/why-choose-image-1.jpg"
-                alt="Clear residential pool"
+                alt="Curățenie pentru locuințe"
                 className="aspect-square w-full rounded-xl object-cover"
               />
               <img
                 src="/images/why-choose-image-2.jpg"
-                alt="Pool deck and water"
+                alt="Curățenie profesională"
                 className="aspect-[1/1.14] w-full rounded-xl object-cover"
               />
             </div>
             <div className="flex items-end bg-[url('/images/icon-sub-heading.svg')] bg-[length:120px_auto] bg-[position:center_40px] bg-no-repeat">
               <img
                 src="/images/why-choose-image-3.jpg"
-                alt="Pool maintenance close up"
+                alt="Detaliu lucrare de curățenie"
                 className="aspect-[1/1.31] w-full rounded-xl object-cover"
               />
             </div>
             <Link
               to="/contact"
               className="absolute top-1/2 left-1/2 z-10 -translate-x-1/2 -translate-y-[70%]"
-              aria-label="Contact now"
+              aria-label="Contactează-ne"
             >
               <img
                 src="/images/contact-now-circle.svg"

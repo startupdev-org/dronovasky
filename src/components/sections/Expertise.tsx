@@ -16,14 +16,14 @@ export function Expertise() {
         <div className="grid items-center gap-12 lg:grid-cols-2">
           <img
             src="/images/expertise-image.png"
-            alt="Pool technician beside a clean pool"
+            alt="Specialist în curățenie profesională"
             className="aspect-[1/1.2543] w-full object-cover object-top lg:mr-[30px]"
           />
           <div className="lg:order-none">
             <SectionHeading
-              eyebrow="Our expertise"
-              title="Our expertise quality pool care you can trust"
-              description="With years of experience and a team of skilled professionals, we provide top-tier pool cleaning and maintenance services. We focus on delivering, reliable care, ensuring your pool stays in perfect condition, season after season."
+              eyebrow="experiența noastră"
+              title="Curățenie de calitate, în care poți avea încredere"
+              description="Folosim echipamente profesionale și soluții potrivite pentru fiecare suprafață, pentru rezultate curate și îngrijite."
             />
             <div className="space-y-[30px]">
               {skills.map((skill) => (
@@ -44,7 +44,7 @@ export function Expertise() {
             <CheckList
               columns
               className="mt-10 border-t border-line pt-10"
-              items={["Professional Cleaning Services", "Efficient Renovations & Upgrades"]}
+              items={["Servicii de curățenie profesională", "Soluții eficiente pentru orice suprafață"]}
             />
           </div>
         </div>

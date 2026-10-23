@@ -12,8 +12,8 @@ export function Testimonials() {
         <div className="mb-16 lg:mb-20">
           <SectionHeading
             align="center"
-            eyebrow="testimonials"
-            title="Customer testimonials see what our clients say"
+            eyebrow="recenzii"
+            title="Vezi ce spun clienții noștri"
           />
         </div>
 
@@ -37,7 +37,7 @@ export function Testimonials() {
                 <button
                   key={item.name}
                   type="button"
-                  aria-label={`Show testimonial from ${item.name}`}
+                  aria-label={`Arată recenzia de la ${item.name}`}
                   onClick={() => setIndex(dot)}
                   className={`relative h-1.5 w-1.5 rounded-full transition-colors ${dot === index ? "bg-accent before:absolute before:top-1/2 before:left-1/2 before:h-3.5 before:w-3.5 before:-translate-x-1/2 before:-translate-y-1/2 before:rounded-full before:border before:border-accent" : "bg-line"}`}
                 />
@@ -63,7 +63,7 @@ export function Testimonials() {
 
         <div className="mt-20">
           <h3 className="mx-auto mb-[60px] max-w-[430px] text-center text-xl leading-snug text-primary">
-            Partnering with Industry Leaders for Superior Pool Cleaning
+            Curățenie profesională pentru rezultate de încredere
           </h3>
           <div className="overflow-hidden">
             <div className="flex w-max animate-[marquee_28s_linear_infinite] items-center gap-16">

@@ -12,8 +12,8 @@ export function Pricing() {
         <div className="mb-16 lg:mb-20">
           <SectionHeading
             align="center"
-            eyebrow="Pricing plan"
-            title="Affordable pricing plans for every pool need"
+            eyebrow="prețuri"
+            title="Oferte adaptate fiecărei lucrări"
           />
         </div>
 
@@ -44,13 +44,13 @@ export function Pricing() {
                   {plan.price}
                   <sub className={`ml-1 text-base font-normal capitalize ${plan.featured ? "text-white" : "text-muted"}`}>
                     {" "}
-                    /Per Month
+                    / lucrare
                   </sub>
                 </h2>
               </div>
               <div className="mt-[30px]">
                 <Button href="#contact" arrow={false} tone={plan.featured ? "inverse" : "accent"}>
-                  get started
+                  Solicită o ofertă
                 </Button>
               </div>
             </article>

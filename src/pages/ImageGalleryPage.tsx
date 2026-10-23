@@ -2,16 +2,17 @@ import { useState } from "react"
 import { PageBanner } from "../components/layout/PageBanner"
 import { Lightbox } from "../components/ui/Lightbox"
 import { Container } from "../components/ui/SectionHeading"
+import { company } from "../data/company"
 import { galleryImages } from "../data/content"
 import { usePageTitle } from "../hooks/usePageTitle"
 
 export function ImageGalleryPage() {
   const [active, setActive] = useState<number | null>(null)
-  usePageTitle("Our Gallery - Waveup")
+  usePageTitle(`Galerie - ${company.name}`)
 
   return (
     <main>
-      <PageBanner title="Our gallery" crumbs={[{ label: "home", href: "/" }, { label: "Our gallery" }]} />
+      <PageBanner title="Galeria noastră" crumbs={[{ label: "acasă", href: "/" }, { label: "galerie" }]} />
       <section className="pt-[100px] pb-[70px]">
         <Container>
           <div className="grid gap-[30px] sm:grid-cols-2 lg:grid-cols-3">
