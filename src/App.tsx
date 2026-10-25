@@ -6,6 +6,7 @@ import { FaqPage } from "./pages/FaqPage"
 import { HomePage } from "./pages/HomePage"
 import { ImageGalleryPage } from "./pages/ImageGalleryPage"
 import { NotFoundPage } from "./pages/NotFoundPage"
+import { PricesPage } from "./pages/PricesPage"
 import { ProjectsPage } from "./pages/ProjectsPage"
 import { ServiceDetailsPage } from "./pages/ServiceDetailsPage"
 import { ServicesPage } from "./pages/ServicesPage"
@@ -21,6 +22,7 @@ export default function App() {
           <Route path="services" element={<ServicesPage />} />
           <Route path="services/:slug" element={<ServiceDetailsPage />} />
           <Route path="contact" element={<ContactPage />} />
+          <Route path="preturi" element={<PricesPage />} />
           <Route path="projects" element={<ProjectsPage />} />
           <Route path="gallery" element={<ImageGalleryPage />} />
           <Route path="videos" element={<VideoGalleryPage />} />

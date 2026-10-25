@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import { company, companyContact } from "../../data/company"
+import { company, companyContact, companyLogo } from "../../data/company"
 
 type SidebarLink = {
   label: string
@@ -52,7 +52,7 @@ export function HelpCard() {
     <aside className="relative overflow-hidden rounded-xl bg-[url('/images/sidebar-cta-bg.jpg')] bg-cover bg-center p-[30px]">
       <div className="absolute inset-0 bg-primary/60" />
       <div className="relative z-10">
-        <img src="/images/logo.svg" alt="" className="mb-[30px] w-[190px]" />
+        <img src={companyLogo} alt="" className="mb-[30px] w-[170px]" />
         <h3 className="mb-10 text-xl leading-snug font-semibold text-white">
           Ai nevoie de ajutor? Suntem aici pentru a-ți oferi soluția potrivită.
         </h3>

@@ -1,6 +1,9 @@
-import { clientAvatars } from "../../data/content"
+import { Link } from "react-router-dom"
+import { clientAvatars, sitePages } from "../../data/content"
 import { Container, SectionHeading, SectionLink } from "../ui/SectionHeading"
 import { PlayButton } from "../ui/VideoModal"
+
+const heroLinks = sitePages.filter((page) => page.href !== "/" && page.href !== "/contact")
 
 type HeroProps = {
   onPlay: () => void
@@ -17,7 +20,7 @@ export function Hero({ onPlay }: HeroProps) {
         playsInline
         poster="/images/hero-bg.jpg"
       >
-        <source src="https://demo.awaikenthemes.com/assets/videos/waveup-video.mp4" type="video/mp4" />
+        <source src="/images/hero.mp4" type="video/mp4" />
       </video>
       <div className="absolute inset-0 bg-[linear-gradient(0deg,rgba(4,34,69,0.5),rgba(4,34,69,0.5)),linear-gradient(180deg,rgba(4,34,69,0)_76%,rgba(4,34,69,0.8)_94%),linear-gradient(0deg,rgba(4,34,69,0)_82%,rgba(4,34,69,0.8)_100%)]" />
 
@@ -63,13 +66,15 @@ export function Hero({ onPlay }: HeroProps) {
 
         <div className="mt-16 flex flex-col gap-5 border-t border-white/10 pt-10 lg:mt-20 lg:flex-row lg:items-center lg:justify-between">
           <p className="m-0 text-white lg:w-[40%]">
-            Hai să facem spațiul tău impecabil. <SectionLink href="#contact" tone="light">Contactează-ne</SectionLink>
+            Hai să facem spațiul tău impecabil. <SectionLink href="/contact" tone="light">Contactează-ne</SectionLink>
           </p>
           <ul className="m-0 flex list-none flex-wrap justify-start gap-x-[30px] gap-y-3 p-0 lg:w-[60%] lg:justify-end">
-            {["Curățenie profesională", "Curățenie cu drone"].map((item) => (
-              <li key={item} className="relative pl-[30px] text-white">
-                <i className="fa-solid fa-circle-check absolute top-0.5 left-0 text-[18px] text-accent" />
-                {item}
+            {heroLinks.map((item) => (
+              <li key={item.href}>
+                <Link to={item.href} className="relative block pl-[30px] text-white transition-colors hover:text-accent">
+                  <i className="fa-solid fa-circle-check absolute top-0.5 left-0 text-[18px] text-accent" />
+                  {item.label}
+                </Link>
               </li>
             ))}
           </ul>

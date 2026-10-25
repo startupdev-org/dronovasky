@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { partnerLogos, testimonialStats, testimonials } from "../../data/content"
+import { testimonialStats, testimonials } from "../../data/content"
 import { Container, SectionHeading } from "../ui/SectionHeading"
 
 export function Testimonials() {
@@ -56,19 +56,6 @@ export function Testimonials() {
                   <h2 className="mb-2 text-[46px] leading-none text-white">{stat.value}</h2>
                   <p className="m-0 text-white capitalize">{stat.label}</p>
                 </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        <div className="mt-20">
-          <h3 className="mx-auto mb-[60px] max-w-[430px] text-center text-xl leading-snug text-primary">
-            Curățenie profesională pentru rezultate de încredere
-          </h3>
-          <div className="overflow-hidden">
-            <div className="flex w-max animate-[marquee_28s_linear_infinite] items-center gap-16">
-              {[...partnerLogos, ...partnerLogos].map((logo, logoIndex) => (
-                <img key={`${logo}-${logoIndex}`} src={logo} alt="" className="h-12 w-[150px] object-contain" />
               ))}
             </div>
           </div>

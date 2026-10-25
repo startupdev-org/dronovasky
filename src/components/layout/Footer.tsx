@@ -1,7 +1,7 @@
 import type { ReactNode } from "react"
 import { Link } from "react-router-dom"
-import { footerServices, quickLinks } from "../../data/content"
-import { company, companyContact } from "../../data/company"
+import { footerServices, sitePages } from "../../data/content"
+import { company, companyContact, companyLogo } from "../../data/company"
 import { Container } from "../ui/SectionHeading"
 
 const START_YEAR = 2026;
@@ -32,7 +32,7 @@ export function Footer() {
 
           <div className="grid gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,2fr)]">
             <div className="lg:mr-[70px]">
-              <img src="/images/footer-logo.svg" alt={company.name} className="mb-5 w-[190px]" />
+              <img src={companyLogo} alt={company.name} className="mb-5 w-[180px]" />
               <p className="mb-[30px] text-white">
                 Curățăm tot. De la sol până la cer. Servicii profesionale pentru locuințe, oficii, spații comerciale și clădiri.
               </p>
@@ -54,7 +54,7 @@ export function Footer() {
             <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-[0.7fr_1.1fr_1.1fr] lg:gap-[60px]">
               <FooterColumn title="linkuri rapide">
                 <ul className="m-0 list-disc space-y-2.5 pl-5 marker:text-accent">
-                  {quickLinks.map((link) => (
+                  {sitePages.map((link) => (
                     <li key={link.label} className="text-white capitalize">
                       <Link to={link.href} className="transition-colors hover:text-accent">
                         {link.label}

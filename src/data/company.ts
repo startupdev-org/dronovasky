@@ -1,7 +1,5 @@
-/**
- * Company details used throughout the website.
- * Update this file when any public business information changes.
- */
+export const companyLogo = "/images/Dronova Logo White.png"
+
 export const company = {
   name: "DronovaSky",
   phone: {

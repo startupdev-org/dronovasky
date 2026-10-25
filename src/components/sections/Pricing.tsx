@@ -2,11 +2,13 @@ import { planFeatures, plans, pricingNotes } from "../../data/content"
 import { Button } from "../ui/Button"
 import { Container, SectionHeading } from "../ui/SectionHeading"
 
-export function Pricing() {
+export function Pricing({ variant = "home" }: { variant?: "home" | "page" }) {
+  const page = variant === "page"
+
   return (
     <section
-      id="pricing"
-      className="mt-[100px] bg-secondary bg-[url('/images/light-bg-section-shape.png')] bg-cover bg-center py-[100px]"
+      id={page ? undefined : "pricing"}
+      className={`bg-secondary bg-[url('/images/light-bg-section-shape.png')] bg-cover bg-center py-[100px] ${page ? "" : "mt-[100px]"}`}
     >
       <Container>
         <div className="mb-16 lg:mb-20">
@@ -49,7 +51,7 @@ export function Pricing() {
                 </h2>
               </div>
               <div className="mt-[30px]">
-                <Button href="#contact" arrow={false} tone={plan.featured ? "inverse" : "accent"}>
+                <Button href="/contact" arrow={false} tone={plan.featured ? "inverse" : "accent"}>
                   Solicită o ofertă
                 </Button>
               </div>

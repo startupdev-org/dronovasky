@@ -1,39 +1,12 @@
 import { company, companyContact } from "./company"
 
-export type NavChild = {
-  label: string
-  href: string
-}
-
-export type NavItem = {
-  label: string
-  href: string
-  children?: NavChild[]
-}
-
-export const navItems: NavItem[] = [
-  {
-    label: "Acasă",
-    href: "/",
-    children: [
-      { label: "Acasă", href: "/" },
-    ],
-  },
-  { label: "Despre noi", href: "/about" },
+export const sitePages = [
+  { label: "Acasă", href: "/" },
   { label: "Servicii", href: "/services" },
+  { label: "Prețuri", href: "/preturi" },
   { label: "Portofoliu", href: "/projects" },
-  {
-    label: "Mai multe",
-    href: "/services",
-    children: [
-      { label: "Servicii", href: "/services" },
-      { label: "Portofoliu", href: "/projects" },
-      { label: "Galerie foto", href: "/gallery" },
-      { label: "Întrebări frecvente", href: "/faqs" },
-    ],
-  },
   { label: "Contacte", href: "/contact" },
-]
+] as const
 
 export const clientAvatars = [
   "/images/satisfy-client-img-1.jpg",
@@ -276,17 +249,6 @@ export const testimonialStats = [
   { value: "100%", label: "rezultate garantate" },
 ]
 
-export const partnerLogos = [
-  "/images/company-supports-logo-1.svg",
-  "/images/company-supports-logo-2.svg",
-  "/images/company-supports-logo-3.svg",
-  "/images/company-supports-logo-4.svg",
-  "/images/company-supports-logo-5.svg",
-  "/images/company-supports-logo-6.svg",
-  "/images/company-supports-logo-3.svg",
-  "/images/company-supports-logo-5.svg",
-]
-
 export const faqs = [
   {
     question: "Ce servicii oferiți?",
@@ -322,14 +284,6 @@ export const posts = [
     excerpt: "Împrospătăm canapelele și fotoliile prin curățare profesională.",
     image: "/images/post-3.jpg",
   },
-]
-
-export const quickLinks = [
-  { label: "Acasă", href: "/" },
-  { label: "Despre noi", href: "/about" },
-  { label: "Servicii", href: "/services" },
-  { label: "Portofoliu", href: "/projects" },
-  { label: "Contacte", href: "/contact" },
 ]
 
 export const footerServices = sidebarServices.map((service) => ({
